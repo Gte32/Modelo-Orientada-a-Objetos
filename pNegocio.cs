@@ -9,18 +9,17 @@ using static System.Console;
 namespace Negocio
 {
     
-    internal struct Platillo<T> : IPlatillo<T>
+    internal class Producto<T> : IProducto<T>
     {
-        public int precio => precio;
-        public int cantidad => cantidad;
-        public int id => id;
-        public string nombre => nombre;
-
+        public int precio {get;set;}
+        public int cantidad {get;set;}
+        public int id {get;set;}
+        public string nombre {get;set;}
     }
 
     internal struct Menu<T> : IMenu<T>
     {
-        public Platillo<T> platillos => platillos;
+        public List<Producto<T>> productos => productos;
     }
 
     internal struct Cliente<T> : ICliente<T>
@@ -37,7 +36,7 @@ namespace Negocio
 
     internal struct Pedido<T> : IPedido<T>
     {
-        public Platillo<T> ordenes => ordenes; //lista de platillos ordenados
+        public Producto<T> ordenes => ordenes; //lista de productosW ordenados
     }
 
 

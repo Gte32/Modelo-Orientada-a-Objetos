@@ -1,15 +1,31 @@
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\bin\Debug\net10.0\PPersonal.exe
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\bin\Debug\net10.0\PPersonal.deps.json
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\bin\Debug\net10.0\PPersonal.runtimeconfig.json
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\bin\Debug\net10.0\PPersonal.dll
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\bin\Debug\net10.0\PPersonal.pdb
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.AssemblyInfoInputs.cache
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.AssemblyInfo.cs
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.csproj.CoreCompileInputs.cache
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.sourcelink.json
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.dll
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\refint\PPersonal.dll
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.pdb
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\PPersonal.genruntimeconfig.cache
-C:\Users\IGNITER\Desktop\VisualCodigo\POO\Tareas\PPersonal\obj\Debug\net10.0\ref\PPersonal.dll
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/bin/Debug/net10.0/PPersonal.exe
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/bin/Debug/net10.0/PPersonal.deps.json
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/bin/Debug/net10.0/PPersonal.runtimeconfig.json
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/bin/Debug/net10.0/PPersonal.dll
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/bin/Debug/net10.0/PPersonal.pdb
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.AssemblyInfoInputs.cache
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.AssemblyInfo.cs
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.csproj.CoreCompileInputs.cache
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.sourcelink.json
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.dll
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/refint/PPersonal.dll
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.pdb
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/PPersonal.genruntimeconfig.cache
+C:/Users/IGNITER/Desktop/VisualCodigo/POO/Tareas/PPersonal/obj/Debug/net10.0/ref/PPersonal.dll
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/bin/Debug/net10.0/PPersonal
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/bin/Debug/net10.0/PPersonal.deps.json
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/bin/Debug/net10.0/PPersonal.runtimeconfig.json
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/bin/Debug/net10.0/PPersonal.dll
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/bin/Debug/net10.0/PPersonal.pdb
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.GeneratedMSBuildEditorConfig.editorconfig
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.AssemblyInfoInputs.cache
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.AssemblyInfo.cs
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.csproj.CoreCompileInputs.cache
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.sourcelink.json
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.dll
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/refint/PPersonal.dll
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.pdb
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/PPersonal.genruntimeconfig.cache
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/obj/Debug/net10.0/ref/PPersonal.dll
+/home/gustavo/Desktop/Programacion/Programacion Orientada a Objetos/Tareas/Modelo-Orientada-a-Objetos/bin/Debug/net10.0/platillos.json

@@ -1,5 +1,8 @@
 ﻿using static System.Console;
+using System.Text.Json;
+
 namespace Negocio
+
 {
 
     class Program
@@ -34,17 +37,80 @@ namespace Negocio
 
         }
 
+        static void mostrarJsonMenu(List<PlatillosJson> menu)
+        {
+            WriteLine("Menu de platillos disponibles:");
+            for(int i = 0; i < menu.Count; i++)
+            {
+                WriteLine(" {0} - {1} - ${2}", menu[i].Id, menu[i].Nombre, menu[i].Precio);
+            }
+        }
+
         public static Cliente<string> crearCliente(string nombre)
         {
-            Client<string> nombre = new Cliente<string>(nombre);
-           return new Cliente<string>(nombre);
+            Cliente<string> cliente = new Cliente<string>(nombre);
+            return cliente;
         }
+
+        public static Menu<T> convertirMenu<T>(List<PlatillosJson> jsonMenu)
+        {
+            Menu<T> menu = new Menu<T>();
+
+            for(int i = 0; i < jsonMenu.Count; i++)
+            {
+                Producto<T> producto = new Producto<T>
+                {
+                    precio = jsonMenu[i].Precio,
+                    id = jsonMenu[i].Id,
+                    cantidad = jsonMenu[i].Cantidad,
+                    nombre = jsonMenu[i].Nombre
+
+
+                };
+
+                menu.productos.Add(producto);
+
+            }
+
+            return menu;
+
+        }
+        static void printMenu()
+        {
+            //for i 
+        }
+
 
         static void Main(string[] args)
         {
+            //crea o pide el usuario al cual acceder
             string nombreUsuario = protocoloInicio();
+
+            //luego se crea el cliente si es que fue creado
             Cliente<string> cliente = crearCliente(nombreUsuario);
-            
+
+            //se lee el json con los platillos y se deserializa a una lista de objetos PlatillosJson
+            string json = File.ReadAllText("platillos.json");
+            List<PlatillosJson> jsonMenu = JsonSerializer.Deserialize<List<PlatillosJson>>(json);
+            Menu<string> menu = convertirMenu<string>(jsonMenu);
+
+
+
+            //platillosObjetos()
+            //mostrarMenu(menu);
+
+
+
+
+
+
+
+
+
+
+
+            //WriteLine("Cliente creado: {0}", cliente.nombre);
+
 
 
 

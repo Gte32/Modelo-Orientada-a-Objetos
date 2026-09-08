@@ -1,0 +1,182 @@
+[
+  {
+    "precio": 120,
+    "id": 1,
+    "cantidad": 1,
+    "nombre": "Spaghetti alla Carbonara"
+  },
+  {
+    "precio": 135,
+    "id": 2,
+    "cantidad": 1,
+    "nombre": "Lasagna Bolognese"
+  },
+  {
+    "precio": 110,
+    "id": 3,
+    "cantidad": 1,
+    "nombre": "Penne all'Arrabbiata"
+  },
+  {
+    "precio": 145,
+    "id": 4,
+    "cantidad": 1,
+    "nombre": "Fettuccine Alfredo"
+  },
+  {
+    "precio": 130,
+    "id": 5,
+    "cantidad": 1,
+    "nombre": "Spaghetti Bolognese"
+  },
+  {
+    "precio": 125,
+    "id": 6,
+    "cantidad": 1,
+    "nombre": "Penne alla Vodka"
+  },
+  {
+    "precio": 140,
+    "id": 7,
+    "cantidad": 1,
+    "nombre": "Tagliatelle al Ragù"
+  },
+  {
+    "precio": 115,
+    "id": 8,
+    "cantidad": 1,
+    "nombre": "Spaghetti Aglio e Olio"
+  },
+  {
+    "precio": 150,
+    "id": 9,
+    "cantidad": 1,
+    "nombre": "Ravioli di Ricotta"
+  },
+  {
+    "precio": 155,
+    "id": 10,
+    "cantidad": 1,
+    "nombre": "Gnocchi al Pesto"
+  },
+  {
+    "precio": 135,
+    "id": 11,
+    "cantidad": 1,
+    "nombre": "Cannelloni Ripieni"
+  },
+  {
+    "precio": 160,
+    "id": 12,
+    "cantidad": 1,
+    "nombre": "Risotto ai Funghi"
+  },
+  {
+    "precio": 170,
+    "id": 13,
+    "cantidad": 1,
+    "nombre": "Risotto alla Milanese"
+  },
+  {
+    "precio": 145,
+    "id": 14,
+    "cantidad": 1,
+    "nombre": "Linguine alle Vongole"
+  },
+  {
+    "precio": 180,
+    "id": 15,
+    "cantidad": 1,
+    "nombre": "Risotto ai Frutti di Mare"
+  },
+  {
+    "precio": 125,
+    "id": 16,
+    "cantidad": 1,
+    "nombre": "Pasta al Pesto Genovese"
+  },
+  {
+    "precio": 115,
+    "id": 17,
+    "cantidad": 1,
+    "nombre": "Pasta Pomodoro"
+  },
+  {
+    "precio": 130,
+    "id": 18,
+    "cantidad": 1,
+    "nombre": "Bucatini all'Amatriciana"
+  },
+  {
+    "precio": 140,
+    "id": 19,
+    "cantidad": 1,
+    "nombre": "Pasta alla Norma"
+  },
+  {
+    "precio": 135,
+    "id": 20,
+    "cantidad": 1,
+    "nombre": "Orecchiette con Cime di Rapa"
+  },
+  {
+    "precio": 190,
+    "id": 21,
+    "cantidad": 1,
+    "nombre": "Pizza Margherita"
+  },
+  {
+    "precio": 210,
+    "id": 22,
+    "cantidad": 1,
+    "nombre": "Pizza Quattro Formaggi"
+  },
+  {
+    "precio": 220,
+    "id": 23,
+    "cantidad": 1,
+    "nombre": "Pizza Prosciutto e Funghi"
+  },
+  {
+    "precio": 230,
+    "id": 24,
+    "cantidad": 1,
+    "nombre": "Pizza Diavola"
+  },
+  {
+    "precio": 200,
+    "id": 25,
+    "cantidad": 1,
+    "nombre": "Pizza Capricciosa"
+  },
+  {
+    "precio": 165,
+    "id": 26,
+    "cantidad": 1,
+    "nombre": "Parmigiana di Melanzane"
+  },
+  {
+    "precio": 175,
+    "id": 27,
+    "cantidad": 1,
+    "nombre": "Pollo alla Parmigiana"
+  },
+  {
+    "precio": 185,
+    "id": 28,
+    "cantidad": 1,
+    "nombre": "Saltimbocca alla Romana"
+  },
+  {
+    "precio": 195,
+    "id": 29,
+    "cantidad": 1,
+    "nombre": "Osso Buco alla Milanese"
+  },
+  {
+    "precio": 95,
+    "id": 30,
+    "cantidad": 1,
+    "nombre": "Tiramisù"
+  }
+]

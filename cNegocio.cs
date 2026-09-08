@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 using static System.Console;
 
 namespace  Negocio
 {
-    internal interface IPlatillo<T>
+    internal interface IProducto<T>
     {
-        int precio {get;}
-        int id {get;}
-        int cantidad {get;} 
-        string nombre {get;}
+        int Precio {get;set;}
+        int Id {get;set;}
+        int Cantidad {get;set;} 
+        string Nombre {get;set;}
 
 
     }
 
     internal interface IMenu<T>
     {
-        Platillo<T> platillos {get;}
+        List<Producto<T>> productos {get;}
 
     }
 
@@ -34,8 +36,24 @@ namespace  Negocio
 
     internal interface IPedido<T>
     {
-        Platillo<T> ordenes {get;} //lista de platillos ordenados
+        Producto<T> ordenes {get;} //lista de productos ordenados
 
+    }
+
+
+    public class PlatillosJson
+    {
+        [JsonPropertyName("precio")]
+        public int Precio { get; set; }
+
+        [JsonPropertyName("id")]
+        public int Id { get; set; }
+
+        [JsonPropertyName("cantidad")]
+        public int Cantidad { get; set; }
+
+        [JsonPropertyName("nombre")]
+        public string Nombre { get; set; } = "";
     }
 
 }
