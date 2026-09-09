@@ -60,10 +60,10 @@ namespace Negocio
             {
                 Producto<T> producto = new Producto<T>
                 {
-                    precio = jsonMenu[i].Precio,
-                    id = jsonMenu[i].Id,
-                    cantidad = jsonMenu[i].Cantidad,
-                    nombre = jsonMenu[i].Nombre
+                    Precio = jsonMenu[i].Precio,
+                    Id = jsonMenu[i].Id,
+                    Cantidad = jsonMenu[i].Cantidad,
+                    Nombre = jsonMenu[i].Nombre
 
 
                 };
