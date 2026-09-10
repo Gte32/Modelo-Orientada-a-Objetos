@@ -7,34 +7,94 @@ namespace Negocio
 
     class Program
     {
-        //debe ser static para no crear otro objeto
-        public static string protocoloInicio()
+
+    static Cliente<string>? seleccionarUsuario()
+    {
+        if (!File.Exists("usuarios.json"))
         {
-            WriteLine("Bienvenido a Rappi 2, porfavor ingrese su usuario o cree uno nuevo ");
-            WriteLine("1 - Crear usuario");
-            WriteLine("2 - Iniciar sesion");
-            WriteLine("Cualquier otra tecla para salir");
-
-            string opcion = ReadLine();
-            if (opcion == "1")
-            {
-                WriteLine("Ingrese su nombre de usuario a crear");
-                string nombre = ReadLine();
-                return nombre;
-            }
-            else if (opcion == "2")
-            {
-                WriteLine("Ingrese su nombre de usuario para iniciar sesion");
-                string nombre = ReadLine();
-                return nombre;
-            }
-            else
-            {
-                WriteLine("Saliendo del programa");
-                return null;
-            }
-
+            WriteLine("No hay usuarios disponibles.");
+            return null;
         }
+
+        string json = File.ReadAllText("usuarios.json");
+
+        List<Cliente<string>> usuarios =
+            JsonSerializer.Deserialize<List<Cliente<string>>>(json)
+            ?? new List<Cliente<string>>();
+
+        if (usuarios.Count == 0)
+        {
+            WriteLine("No hay usuarios disponibles.");
+            return null;
+        }
+
+        WriteLine("USUARIOS GUARDADOS:\n");
+
+        for (int i = 0; i < usuarios.Count; i++)
+        {
+            WriteLine("{0}. {1}", i + 1, usuarios[i].nombre);
+        }
+
+        WriteLine("\nSelecciona un usuario:");
+
+        if (!int.TryParse(ReadLine(), out int seleccion))
+        {
+            return null;
+        }
+
+        if (seleccion < 1 || seleccion > usuarios.Count)
+        {
+            return null;
+        }
+
+        return usuarios[seleccion - 1];
+    }  
+
+        //debe ser static para no crear otro objeto
+    static Cliente<string> protocoloInicio()
+    {
+        Console.Clear();
+
+        WriteLine("Bienvenido a Rappi 2, porfavor ingrese su usuario o cree uno nuevo");
+        WriteLine("1 - Crear usuario");
+        WriteLine("2 - Iniciar sesion");
+        WriteLine("Cualquier otra tecla para salir");
+
+        string opcion = ReadLine();
+
+        if (opcion == "1")
+        {
+            Console.Clear();
+
+            WriteLine("Ingrese su nombre de usuario a crear");
+            string nombre = ReadLine();
+
+            return crearCliente(nombre);
+        }
+        else if (opcion == "2")
+        {
+            Console.Clear();
+
+            Cliente<string>? cliente = seleccionarUsuario();
+
+            if (cliente == null)
+            {
+                WriteLine("\nNo hay usuarios disponibles.");
+                ReadKey();
+                Environment.Exit(0);
+            }
+
+            return cliente.Value;
+        }
+        else
+        {
+            Console.Clear();
+            WriteLine("Saliendo del programa");
+            Environment.Exit(0);
+
+            return new Cliente<string>();
+        }
+    }
 
         static void mostrarJsonMenu(List<PlatillosJson> menu)
         {
@@ -74,7 +134,7 @@ namespace Negocio
             return menu;
 
         }
-        static void printMenu<T>(Menu<T> menu)//, Cliente<T> cliente)
+        static void printMenu<T>(Menu<T> menu, Cliente<T> cliente)
         {
             int i = 0;
             bool done = true;
@@ -84,7 +144,9 @@ namespace Negocio
                 while (done)
                 {
                     Console.Clear();
-
+                    WriteLine("Usuario: " + cliente.nombre);
+                    WriteLine("Seleccione el Producto para agregarlo a su orden:\n");
+                    
                     WriteLine(
                         "{0} - {1} - ${2}",
                         menu.Productos[i].Id,
@@ -158,6 +220,8 @@ namespace Negocio
 
                         WriteLine("\nEscribe el número del producto que deseas quitar:");
 
+                        WriteLine("=>Si no escribe un número válido, nada sera eliminado<=");
+
                         if (!int.TryParse(ReadLine(), out int eliminar))
                             continue;
 
@@ -169,7 +233,9 @@ namespace Negocio
                     else if (tecla == ConsoleKey.Escape)
                     {
                        done = false;
+                       Console.Clear();
                        WriteLine("Pedido completado, saliendo del menu.....");
+                       cliente.Pedidos.Add(orden);
                        ReadKey();
                        Console.Clear();
                     }
@@ -219,20 +285,52 @@ namespace Negocio
             Console.Clear();
         }
 
+        static void mostrarPedidos(Cliente<string> cliente) 
+        { 
+            WriteLine("Usuario: " + cliente.nombre);
+            WriteLine("\nPEDIDOS DEL CLIENTE:");
+                for (int i = 0; i < cliente.Pedidos.Count; i++) 
+                {  
+                    WriteLine($"\nPedido #{i + 1}"); 
+                    foreach (Producto<string> producto in cliente.Pedidos[i].Ordenes) 
+                    { 
+                        WriteLine( "{0} - {1} | Cantidad: {2} | Precio: ${3}",
+                        producto.Id, producto.Nombre, producto.Cantidad, producto.Precio ); 
+                    } 
+                } 
+        }
+
+        static void guardarCliente(Cliente<string> cliente)
+        {
+            JsonSerializerOptions opciones = new JsonSerializerOptions
+            {
+                WriteIndented = true
+            };
+
+            List<Cliente<string>> usuarios = new List<Cliente<string>>();
+
+            usuarios.Add(cliente);
+
+            string json = JsonSerializer.Serialize(usuarios, opciones);
+
+            File.WriteAllText("usuarios.json", json);
+        }
+
 
         static void Main(string[] args)
         {
             //crea o pide el usuario al cual acceder
-            //string nombreUsuario = protocoloInicio();
-            //luego se crea el cliente si es que fue creado
-            //Cliente<string> cliente = crearCliente(nombreUsuario);
+            Cliente<string> cliente = protocoloInicio();
 
             //se lee el json con los platillos y se deserializa a una lista de objetos PlatillosJson
             string json = File.ReadAllText("platillos.json");
             List<PlatillosJson> jsonMenu = JsonSerializer.Deserialize<List<PlatillosJson>>(json);
             Menu<string> menu = convertirMenu<string>(jsonMenu);
-            printMenu(menu);
 
+            //hacer menu interactuable
+            printMenu(menu,cliente);
+            mostrarPedidos(cliente);
+            guardarCliente(cliente);
 
             //platillosObjetos()
             //mostrarMenu(menu);

@@ -14,7 +14,20 @@ namespace Negocio
         public int Precio {get;set;}
         public int Cantidad {get;set;}
         public int Id {get;set;}
-        public string Nombre {get;set;}
+        public string Nombre { get; set; } = "";
+
+        public void Mostrar()
+        {
+            WriteLine(
+                "{0} - {1} | Cantidad: {2} | Precio: ${3}",
+                Id,
+                Nombre,
+                Cantidad,
+                Precio
+            );
+        }
+
+        
     }
 
     internal struct Menu<T> : IMenu<T>
@@ -24,6 +37,16 @@ namespace Negocio
         public Menu()
         {
             Productos = new List<Producto<T>>();
+        }
+
+         public void Mostrar()
+        {
+            WriteLine("MENU:");
+
+            foreach (Producto<T> producto in Productos)
+            {
+                producto.Mostrar();
+            }
         }
     }
 
@@ -37,6 +60,19 @@ namespace Negocio
             this.nombre = nombre;
             Pedidos = new List<Pedido<T>>();
         }
+
+        public void Mostrar()
+        {
+            WriteLine("CLIENTE: " + nombre);
+
+            for (int i = 0; i < Pedidos.Count; i++)
+            {
+                WriteLine("\nPedido #{0}", i + 1);
+                Pedidos[i].Mostrar();
+            }
+        }
+
+
     }
 
     internal struct Pedido<T> : IPedido<T>
@@ -47,6 +83,15 @@ namespace Negocio
         {
             Ordenes = new List<Producto<T>>();
         } 
+        public void Mostrar()
+        {
+            WriteLine("PEDIDO:");
+
+            foreach (Producto<T> producto in Ordenes)
+            {
+                producto.Mostrar();
+            }
+        }
     }
 
 
