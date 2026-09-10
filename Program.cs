@@ -20,7 +20,6 @@ namespace Negocio
             {
                 WriteLine("Ingrese su nombre de usuario a crear");
                 string nombre = ReadLine();
-                string contraseña = ReadLine();
                 return nombre;
             }
             else if (opcion == "2")
@@ -75,7 +74,7 @@ namespace Negocio
             return menu;
 
         }
-        static void printMenu<T>(Menu<T> menu)
+        static void printMenu<T>(Menu<T> menu)//, Cliente<T> cliente)
         {
             int i = 0;
             bool done = true;
@@ -176,6 +175,7 @@ namespace Negocio
                     }
                 }
 
+
         }
 
         static void addOrder<T>(Producto<T> producto, Pedido<T> orden)
@@ -224,7 +224,6 @@ namespace Negocio
         {
             //crea o pide el usuario al cual acceder
             //string nombreUsuario = protocoloInicio();
-
             //luego se crea el cliente si es que fue creado
             //Cliente<string> cliente = crearCliente(nombreUsuario);
 
@@ -233,7 +232,6 @@ namespace Negocio
             List<PlatillosJson> jsonMenu = JsonSerializer.Deserialize<List<PlatillosJson>>(json);
             Menu<string> menu = convertirMenu<string>(jsonMenu);
             printMenu(menu);
-
 
 
             //platillosObjetos()
