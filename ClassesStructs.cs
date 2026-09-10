@@ -19,24 +19,34 @@ namespace Negocio
 
     internal struct Menu<T> : IMenu<T>
     {
-        public List<Producto<T>> productos => productos;
+        public List<Producto<T>> Productos{get;set;}
+
+        public Menu()
+        {
+            Productos = new List<Producto<T>>();
+        }
     }
 
     internal struct Cliente<T> : ICliente<T>
     {
         public string nombre {get;set;}
-        public List<Pedido<T>> pedidos {get;set;} 
+        public List<Pedido<T>> Pedidos {get;set;} 
 
         public Cliente(string nombre)
         {
             this.nombre = nombre;
-            pedidos = new List<Pedido<T>>();
+            Pedidos = new List<Pedido<T>>();
         }
     }
 
     internal struct Pedido<T> : IPedido<T>
     {
-        public Producto<T> ordenes => ordenes; //lista de productosW ordenados
+        public List<Producto<T>> Ordenes {get;set;} //
+
+        public Pedido()
+        {
+            Ordenes = new List<Producto<T>>();
+        } 
     }
 
 

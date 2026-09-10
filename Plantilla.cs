@@ -22,21 +22,21 @@ namespace  Negocio
 
     internal interface IMenu<T>
     {
-        List<Producto<T>> productos {get;}
+        List<Producto<T>> Productos {get;set;}
 
     }
 
     internal interface ICliente<T>
     {
         string nombre {get;}
-        List<Pedido<T>> pedidos {get;}
+        List<Pedido<T>> Pedidos {get;set;}
 
 
     }
 
     internal interface IPedido<T>
     {
-        Producto<T> ordenes {get;} //lista de productos ordenados
+        List<Producto<T>> Ordenes {get;set;} //lista de productos ordenados
 
     }
 
